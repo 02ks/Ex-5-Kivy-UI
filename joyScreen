@@ -1,0 +1,50 @@
+<JoyScreen>
+
+    on_enter: root.start_joystick_thread()
+    name: 'joyScreen'
+    btn6: btn6
+    xy: xy
+    lb0: lb0
+    lbz: lbz
+
+    FloatLayout:
+        size_hint: None, None
+
+
+    DPEAButton:
+        id: btn6
+        text: "Avoid Defcon"
+        size: 70, 70
+        x: root.width * 0.9
+        y:root.height * 0.9
+        color: 1, 0, 0.7, 1
+        on_press: root.transition_back()
+
+    Label:
+        id: xy
+        text: "< · >"
+        size: 100, 100
+        font_size: 20
+        x: str(root.X_axis)#root.width * 0.2
+        y: str(root.Y_axis)#root.height * 0.2
+        color: 1, 1, 1, 1
+
+    Label:
+        id: lb0
+        text: ""
+        size: 20, 20
+        font_size: 20
+        x: root.width * 0
+        y: root.height * 0.4
+        color: 0, 1, 1, 1
+
+    Label:
+        id: lbz
+        text: "Enter Correct Sequence"
+        size: 20, 20
+        font_size: 20
+        x: root.width * 0
+        y: root.height * -0.4
+        color: 1, 1, 1, 1
+
+
